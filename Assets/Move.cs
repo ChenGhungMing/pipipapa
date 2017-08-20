@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Move : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () 
+    public GameObject Ball;
+
+    // Use this for initialization
+    void Start () 
 	{
 		
 	}
@@ -15,19 +17,19 @@ public class Move : MonoBehaviour {
 	{
 		if (Input.GetKey(KeyCode.RightArrow))
 		{
-			gameObject.transform.position += new Vector3(0.1f,0,0);
+            Ball.transform.position += new Vector3(0.1f,0,0);
 		}
 		if (Input.GetKey(KeyCode.LeftArrow))
 		{
-			gameObject.transform.position += new Vector3(-0.1f,0,0);
+            Ball.transform.position += new Vector3(-0.1f,0,0);
 		}
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
-			gameObject.transform.position += new Vector3(0,0.1f,0);
+            Ball.transform.position += new Vector3(0,0.1f,0);
 		}
 		if (Input.GetKey(KeyCode.DownArrow))
 		{
-			gameObject.transform.position += new Vector3(0,-0.1f,0);
+            Ball.transform.position += new Vector3(0,-0.1f,0);
 		}
 	}
 }
